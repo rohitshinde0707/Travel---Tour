@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+:root
+{
+    --purple:#9A48D0;
+    --white:#f9f9f9;
+    --shadow:0px 1px 1px black;
+}
+/* Navbar start */
+
+#navbar
+{
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: var(--shadow);
+}
+#logo{
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    text-shadow: var(--shadow);
+    margin-bottom: 5px;
+}
+
+#logo span{
+    color: var(--purple);
+}
+
+.navbar-toggler span
+{
+    color: var(--purple);
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    margin: 0px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background-color: var(--purple);
+    color: var(--white);
+}
+#navbar form button{
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+}
+#navbar form button:hover
+{
+    background-color: var(--white);
+    color: var(--purple);
+    outline: 1px solid var(--purple);
+}
+/* Navbar end */
+
+
+/* Home section */
+
+
+.home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url(/images/pexels-aleksandar-pasaric-325185.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home .content
+{
+    text-align: center;
+    padding-top: 200px;
+}
+.home .content h5{
+    color: var(--white);
+    font-size: 38px;
+    font-weight: 500;
+    text-shadow: var(--shadow);
+}
+.home .content h1{
+    color: var(--white);
+    font-size: 70px;
+    font-weight: 500;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+.changecontent::after
+{
+    content: '';
+    color: var(--purple);
+    text-shadow: var(--shadow);
+    animation: changetxt 10s infinite linear;
+}
+@keyframes changetxt {
+    0%{content: 'India';}
+    10%{content: 'Germany';}
+    20%{content: 'Italy';}
+    30%{content: 'Turkey';}
+    40%{content: 'China';}
+    50%{content: 'England';}
+    60%{content: 'United States';}
+    70%{content: 'Dubai';}
+    80%{content: 'Singapore';}
+    90%{content: 'Russia';}
+    100%{content: 'Spain';}
+}
+.home .content p{
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.home .content a{
+    padding: 10px;
+    background-color: var(--white);
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+.home .content a:hover{
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+@media (max-width:850px) {
+    .home
+    {
+        background-position: 50%;
+    }
+    
+}
+@media (max-width:450px) {
+    .home .content h5{
+        font-size: 25px;
+    }
+    .home .content h1{
+        font-size: 35px;
+    }
+    .home .content p{
+        font-size: 13px;
+    }
+    
+}
+/* Home section end */
+
+
+/* Section book now start */
+
+.book{
+    background: var(--white);
+    padding: 50px;
+}
+.main-text h1 {
+    text-align: center;
+    text-shadow: var(--shadow);
+    font-weight: 600;
+}
+.main-text h1 span
+{
+    color: var(--purple);
+}
+.book .card{
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.book .row
+{
+    margin-top: 30px;
+}
+.book form input{
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin: 30px 0px;
+}
+.book form textarea
+{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: var(--shadow);
+    height: 200px;
+
+}
+.book .submit
+{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--purple);
+    color: var(--white);
+    margin-top: 30px;
+    transition: 0.5s ease;
+}
+.book .submit:hover{
+    width: 170px;
+}
+
+@media (max-width:760px) {
+    .book
+    {
+        padding: 0;
+    }
+    .main-text h1
+    {
+        padding: 20px;
+    }
+}
+
+
+/* section packages  */
+
+.main-txt h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.main-txt h1 span
+{
+    color: var(--purple);
+}
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.packages .card img{
+    border-radius: 5px;
+}
+
+.packages .card .card-body
+{
+    background: transparent;
+}
+
+.packages .card .card-body h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.packages .card .card-body p{
+    font-size: 15px;
+}
+.checked
+{
+    color: var(--purple);
+}
+
+.star i{
+    font-size: 15px;
+}
+.packages .card .card-body h6{
+    font-size: 20px;
+}
+.packages .card .card-body a{
+   padding: 10px;
+   text-decoration: none;
+   background: var(--purple);
+   color: var(--white);
+   border-radius: 5px;
+   transition: 0.4s background ease;
+}
+.packages .card .card-body a:hover{
+    color: var(--purple);
+    background: var(--white);
+    border: 1px solid var(--purple);
+}
+
+/* Section Services Start */
+
+.services
+{
+    background: var(--white);
+    margin-top: 50px;
+}
+.services .card
+{
+    box-shadow: var(--shadow);
+    border: none;
+    cursor: pointer;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: var(--purple);
+    margin-top: 20px;
+}
+.services .card .card-body h3{
+    font-weight: 500;
+}
+.services .card .card-body
+{
+    text-align: center;
+}
+
+/* gallary Section */
+.gallary
+{
+    margin-top: 50px;
+}
+.gallary .card{
+ border-radius: 10px;
+ box-shadow: var(--shadow);   
+ cursor: pointer;
+}
+.gallary .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallary .card img:hover{
+    transform: scale(1.1);
+}
+.gallary .card img::after{
+    content: "SINGAPORE";
+    height: 30px;
+    width: 100px;
+    color: #9A48D0;
+    z-index: 3;
+}
+
+/* About us section */
+.about
+{
+    margin-top: 50px;
+    padding: 50px;
+    background: var(--white);
+}
+.about .card{
+    border-radius: 10px;
+}
+.about .card img{
+    border-radius: 10px;
+}
+.about h2{
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.main-row{
+    display: flex;
+    align-items: center;
+}
+.main-row-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.about p{
+    font-weight: 500;
+}
+#about-btn{
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background: var(--purple);
+    color: var(--white);
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#about-btn:hover{
+    width: 170px;
+}
+@media (max-width:765px) {
+    .about{
+        padding: 0px;
+    }
+}
